@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="{{ .Lang }}" class="{{ .Type }} {{ .Kind }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta property="og:url" content="{{ .Permalink }}">
+    {{ if .Params.Summary }}
+      <meta property="og:description" content="{{ .Params.Summary}}">
+    {{ else }}
+      <meta property="og:title" content="{{ .Params.Title }}">
+    {{ end }}
+    {{ with .Params.splash }}
+      <meta property="og:image" content="{{ . | relURL }}">
+    {{ else }}
+      <meta property="og:image" content="{{ "images/nosignal_square.jpg" | relURL }}">
+    {{ end }}
+    <title>{{ block "title" . }}No Signal{{ with .Title }}&thinsp;&mdash;&thinsp;{{ partial "fancy-title.html" . }}{{ end }}{{ end }}</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://nosignal.zone/images/favicon/favicon.ico">
+    {{ if .Site.BuildDrafts }}
+      <link rel="stylesheet" href="{{ "css/fonts.css" | relURL }}">
+      <link rel="stylesheet" href="{{ "css/base.css" | relURL }}">
+    {{ else }}
+      <style>
+        {{ readFile "static/css/fonts.css" | safeCSS }}
+        {{ readFile "static/css/base.css" | safeCSS }}
+      </style>
+    {{ end }}
+  </head>
+  <body>
+    {{ partial "navigation" }}
+    <header>
+      {{ block "header" . }}
+        {{ .Content }}
+      {{ end }}
+    </header>
+
+    {{ block "main" . }}
+      {{ .Content }}
+    {{ end }}
+
+    <section class="footer">
+      <div class="wrap">
+        <p>
+          Created by <a href="https://where.coraline.codes">Coraline Ada Ehmke</a>.
+          CoralineAda on
+          <a href="https://twitch.com/CoralineAda">Twitch</a> and
+          <a href="https://twitter.com/CoralineAda">Twitter</a>.
+        </p>
+      </div>
+    </section>
+
+    {{ if .Site.BuildDrafts }}
+      <script src="/scripts/base.js"></script>
+    {{ else }}
+      <script>
+        {{ readFile "static/scripts/base.js" | safeJS }}
+      </script>
+    {{ end }}
+
+  </body>
+</html>

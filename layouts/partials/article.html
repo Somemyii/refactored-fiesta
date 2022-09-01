@@ -1,0 +1,13 @@
+<article id="{{ .Params.slug }}" class="internal-link">
+  <h4>
+    <a href="#{{ .Params.slug }}">
+      {{ .Params.title }}
+    </a>
+  </h4>
+  {{ .Content }}
+  {{ if .Params.image }}
+    <figure>
+      <img src="/images/static/articles/{{ .Params.image }}" alt="{{ .Params.title }}">
+    </figure>
+  {{ end }}
+</article>
