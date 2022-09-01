@@ -1,0 +1,6 @@
+# Hugo output directory
+/public
+*.DS_Store
+
+/.nova
+.hugo_build.lock

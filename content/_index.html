@@ -1,0 +1,143 @@
++++
+title = "Media for a burning world."
+heading = "*** No Signal ***"
+subheading = "Media for a burning world."
+summary = "If this were serious I would have written a manifesto."
+image = "color_bars.gif"
++++
+
+{{% section id="featured" class="internal-link" %}}
+  <h3>Featured Work</h3>
+  <ul class="hero articles">
+    <li class="article">
+      {{% hero slug="hard-times-podcast" %}}
+    </li>
+    <li class="article">
+      {{% hero slug="coraline-ada-ehmke-on-engaging-conversations" %}}
+    </li>
+  </ul>
+{{% /section %}}
+
+{{% section id="bandcamp-friday" class="internal-link" %}}
+  <h3>Bandcamp Friday</h3>
+  <ul class="hero articles">
+    <li class="article">
+      {{% hero slug="bandcamp-friday" %}}
+    </li>
+    <li class="article">
+      {{% hero slug="bandcamp-friday-with-friends" %}}
+    </li>
+  </ul>
+{{% /section %}}
+
+{{% section id="streaming" class="alt-row internal-link" %}}
+  <h3>Live in studio</h3>
+  <ul class="articles">
+    <li class="article">
+      {{% article slug="in-the-studio" %}}
+    </li>
+    <li class="article">
+      {{% article slug="highlights" %}}
+    </li>
+  </ul>
+{{% /section %}}
+
+{{% section id="music" class="internal-link" %}}
+  <h3>Music Projects</h3>
+  <ul class="articles">
+    <li class="article">
+      {{% article slug="sudres-violin" %}}
+    </li>
+    <li class="article">
+      {{% article slug="shapes-with-two-edges" %}}
+    </li>
+    <li class="article">
+      {{% article slug="auntie-kismet" %}}
+    </li>
+    <li class="article">
+      {{% article slug="a-little-fire-scarecrow" %}}
+    </li>
+    <li class="article">
+      {{% article slug="calamity-orchestra" %}}
+    </li>
+  </ul>
+{{% /section %}}
+
+{{% section id="mixed-media" class="alt-row internal-link" %}}
+  <h3>Mixed (up) media</h3>
+  <ul class="articles">
+    <li class="article">
+      {{% article slug="video-archive" %}}
+    </li>
+    <li>
+      {{% article slug="remix-kits" %}}
+    </li>
+    <li class="article">
+      {{% article slug="work-in-progress" %}}
+    </li>
+    <li class="article">
+      {{% article slug="drone-day" %}}
+    </li>
+  </ul>
+{{% /section %}}
+
+{{% section id="inspirations" class="internal-link" %}}
+  <h3>Inspirations</h3>
+  <ul class="articles">
+    <li class="article">
+      <article id="inspiring-media" class="internal-link">
+        <h4>Flavors</h4>
+        <div class="cloud">
+          {{< randomized-data-list "/data/inspirations.csv" >}}
+        </div>
+      </article>
+    </li>
+    <li class="article">
+      <article id="friends" class="internal-link">
+        <h4>Friends</h4>
+        <div class="cloud">
+          {{< data-list "/data/friends.csv" >}}
+        </div>
+      </article>
+    </li>
+  </ul>
+{{% /section %}}
+
+{{% section id="contact" class="alt-row internal-link" %}}
+  <h3>Get in touch</h3>
+  <p name="instructions">
+    Want to talk? Or maybe collaborate? Send me an an email, or reach me on Twitter
+    at <a href="https://twitter.com/coralineada/">@CoralineAda</a>. (I'm friendly, I swear.)
+  </p>
+  <form name="notify" method="post" action="/" data-modal-id="modal-notify" data-netlify="true" netlify-honeypot="bot-field">
+    <fieldset>
+      <label class="hidden">
+        <span>For bots only</span>
+        <input name="bot-field">
+        <input type="hidden" name="subject" value="Contact form">
+      </label>
+      <label>
+        <span>Name</span>
+        <input name="name" type="name" required>
+      </label>
+      <label>
+        <span>E-mail</span>
+        <input name="email" type="email" required>
+      </label>
+      <label>
+        <span>Message</span>
+        <textarea name="message" required></textarea>
+      </label>
+    </fieldset>
+    <fieldset>
+      <button type="submit" class="button">Send It</button>
+    </fieldset>
+  </form>
+
+  <p name="thanks" class="hidden">
+    Thank you for reaching out-- I'll be in touch soon.
+    You can also reach me on Twitter at <a href="https://twitter.com/coralineada/">@CoralineAda</a>.
+  </p>
+{{% /section %}}
+
+{{% gitinfo %}}
