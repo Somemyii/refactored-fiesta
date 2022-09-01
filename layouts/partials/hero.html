@@ -1,0 +1,14 @@
+<article id="{{ .Params.slug }}">
+  <h4>{{ .Params.title }}</h4>
+  {{ if .Params.image }}
+    {{ img
+        src="{{ .Params.image }}"
+        {{ with .Params.animated }}animated={{ . }} {{ end}}
+        {{ with .Params.link }}link="{{ . }}" {{ end }}
+        caption="{{ .Params.title }}"
+        attr=""
+        attrlink=""
+    }}
+  {{ end }}
+  {{ .Content }}
+</article>
